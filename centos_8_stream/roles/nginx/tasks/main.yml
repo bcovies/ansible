@@ -1,0 +1,13 @@
+---
+  - name: "[NGINX] UPDATE CENTOS 8"
+    become: yes
+    shell: yum update -y
+
+  - name:  "[NGINX] Instala o nginx"
+    become: yes
+    yum:
+      name: nginx
+      state: latest
+
+
+

@@ -1,0 +1,9 @@
+---
+- name: Aplica as modificações ao localhost
+  hosts: localhost
+  become: yes
+  roles:
+    - named
+    - nginx
+    - ssl
+    - config

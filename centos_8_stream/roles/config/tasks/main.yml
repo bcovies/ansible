@@ -1,0 +1,36 @@
+---
+- name: "[NGINX] Start's nginx service"
+  become: yes
+  service:
+    name: nginx
+    state: started
+
+- name: "[NGINX] Enables nginx service"
+  become: yes
+  systemd:
+    name: nginx
+    enabled: yes
+    
+- name: Generate Certs
+  become: true
+  # shell: certbot  --nginx -m bruno02souto@gmail.com --agree-tos -n -d notafreevpn.ddns.net
+  shell: certbot certonly -m bruno02souto@gmail.com --agree-tos -n -d notafreevpn.ddns.net --webroot -w /usr/share/nginx/html/
+
+- name: "[NGINX] COPY ssl.conf"
+  become: yes
+  copy:
+    src: 'files/ssl.conf'
+    dest: '{{ dir_nginx }}/ssl.conf'
+
+- name: "[NGINX] COPY locations.conf"
+  become: yes
+  copy:
+    src: 'files/locations.conf'
+    dest: '{{ dir_nginx }}/locations.conf'
+
+- name: "[NGINX] Restart's nginx service"
+  become: yes
+  service:
+    name: nginx
+    state: restarted
+

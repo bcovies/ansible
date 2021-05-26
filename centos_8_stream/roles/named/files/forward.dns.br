@@ -1,0 +1,31 @@
+$TTL    604800
+@       IN      SOA     dns.br. root.dns.br. (
+                       20210403         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+;       NAME SERVER
+@       IN      NS      dns.br.
+
+@       IN      A       192.168.1.200
+
+servidor.vm		IN	A	192.168.1.200
+proxyreverse.vm	IN	A	192.168.1.4
+vpn.vm	IN	A	192.168.1.5
+
+docker.vm	IN	A	192.168.1.20
+docker01.vm	IN	A	192.168.1.21
+docker02.vm	IN	A	192.168.1.22
+jenkins.vm	IN	A	192.168.1.30
+gitlab.vm	IN	A	192.168.1.31
+rundeck.vm	IN	A	192.168.1.32
+
+
+docker	IN	A	192.168.1.4
+docker01	IN	A	192.168.1.4
+docker02	IN	A	192.168.1.4
+jenkins	IN	A	192.168.1.4
+gitlab	IN	A	192.168.1.4
+rundeck	IN	A	192.168.1.4

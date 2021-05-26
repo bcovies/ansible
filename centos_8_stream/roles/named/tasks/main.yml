@@ -1,0 +1,46 @@
+---
+  - name: "[NAMED] UPDATE CENTOS 8"
+    become: true
+    shell: yum update -y
+  
+  - name: "[NAMED] INSTALL BIND"
+    become: yes
+    yum:
+      name: ["bind"]
+      state: latest
+
+  - name: "[NAMED] COPY forward.dns.br"
+    become: yes
+    copy:
+      src: 'files/forward.dns.br'
+      dest: '{{ dir_named }}/forward.dns.br'
+
+  - name: "[NAMED] COPY reverse.dns.br"
+    become: yes
+    copy:
+      src: 'files/reverse.dns.br'
+      dest: '{{ dir_named }}/reverse.dns.br'
+
+  - name: "[NAMED] COPY named.conf.local"
+    become: yes
+    copy:
+      src: 'files/named.conf.local'
+      dest: '{{ dir_named }}/named.conf.local'
+
+  - name: "[NAMED] COPY named.conf"
+    become: yes
+    copy:
+      src: 'files/named.conf'
+      dest: '/etc/named.conf'
+
+  - name: "[NAMED] Start's named service"
+    become: yes
+    service:
+      name: named
+      state: started
+
+  - name: "[NAMED] Enables named service"
+    become: yes
+    systemd:
+      name: named
+      enabled: yes

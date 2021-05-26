@@ -1,0 +1,4 @@
+---
+dir_named: /etc/named
+dir_nginx: /etc/nginx/conf.d
+#ansible_sudo_pass: -----

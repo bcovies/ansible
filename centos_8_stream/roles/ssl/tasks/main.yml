@@ -1,0 +1,13 @@
+---
+- name: Install epel-release
+  become: true
+  yum: 
+    name: ["epel-release"]
+    state: latest
+
+- name: Install SSL
+  become: true
+  yum: 
+    name: ["certbot", "python3-certbot-nginx","mod_ssl"]
+    state: latest
+
