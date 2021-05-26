@@ -11,21 +11,20 @@ $TTL    604800
 
 @       IN      A       192.168.1.200
 
-servidor.vm		IN	A	192.168.1.200
-proxyreverse.vm	IN	A	192.168.1.4
-vpn.vm	IN	A	192.168.1.5
+dockermgr	    IN	A	192.168.1.200
+dockerwkr01	  IN	A	192.168.1.200
+dockerwkr02	  IN	A	192.168.1.200
 
-docker.vm	IN	A	192.168.1.20
-docker01.vm	IN	A	192.168.1.21
-docker02.vm	IN	A	192.168.1.22
-jenkins.vm	IN	A	192.168.1.30
-gitlab.vm	IN	A	192.168.1.31
-rundeck.vm	IN	A	192.168.1.32
+jenkins	    IN	A	192.168.1.200
+gitlab	    IN	A	192.168.1.200
+rundeck	    IN	A	192.168.1.200
 
+vpn.vm	          IN	A	192.168.1.5
 
-docker	IN	A	192.168.1.4
-docker01	IN	A	192.168.1.4
-docker02	IN	A	192.168.1.4
-jenkins	IN	A	192.168.1.4
-gitlab	IN	A	192.168.1.4
-rundeck	IN	A	192.168.1.4
+dockermgr.vm	    IN	A	192.168.1.20
+dockerwkr01.vm	  IN	A	192.168.1.21
+dockerwkr02.vm	  IN	A	192.168.1.22
+
+jenkins.vm	  IN	A	192.168.1.10
+gitlab.vm	    IN	A	192.168.1.11
+rundeck.vm	  IN	A	192.168.1.12

@@ -11,21 +11,20 @@ $TTL    604800
 
 IN      A       192.168.1.200
 
-200      IN      PTR     servidor.vm.dns.br
-200      IN      PTR     dns.br.
-4      IN      PTR     proxyreverse.vm.dns.br.
-5      IN      PTR     vpn.vm.dns.br.
+200      IN      PTR     dockermgr.dns.br.
+200      IN      PTR     dockerwkr01.dns.br.
+200      IN      PTR     dockerwkr02.dns.br.
 
-4      IN      PTR     docker.dns.br.
-4      IN      PTR     docker01.dns.br.
-4      IN      PTR     docker02.dns.br.
-4      IN      PTR     jenkins.dns.br.
-4      IN      PTR     gitlab.dns.br.
-4      IN      PTR     rundeck.dns.br.
+200      IN      PTR     jenkins.dns.br.
+200      IN      PTR     gitlab.dns.br.
+200      IN      PTR     rundeck.dns.br.
 
-20      IN      PTR     docker.vm.dns.br.
-21      IN      PTR     docker01.vm.dns.br.
-22      IN      PTR     docker02.vm.dns.br.
-30      IN      PTR     jenkins.vm.dns.br.
-31      IN      PTR     gitlab.vm.dns.br.
-32      IN      PTR     rundeck.vm.dns.br.
+5        IN      PTR     vpn.vm.dns.br.
+
+20      IN      PTR     dockermgr.vm.dns.br.
+21      IN      PTR     dockerwkr01.vm.dns.br.
+22      IN      PTR     dockerwkr02.vm.dns.br.
+
+10      IN      PTR     jenkins.vm.dns.br.
+11      IN      PTR     gitlab.vm.dns.br.
+12      IN      PTR     rundeck.vm.dns.br.
