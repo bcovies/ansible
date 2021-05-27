@@ -1,9 +1,9 @@
 zone    "dns.br" {
         type master;
-        file "/etc/named/forward.dns.br";
+        file "/etc/bind/forward.dns.br";
 };
 
 zone    "1.168.192.in-addr.arpa" {
         type master;
-        file "/etc/named/reverse.dns.br";		
+        file "/etc/bind/reverse.dns.br";		
 };
