@@ -1,4 +1,5 @@
 ---
 dir_named: /etc/named
 dir_nginx: /etc/nginx/conf.d
-#ansible_sudo_pass: -----
+pacotes_basico_de_instalacao: "epel-release", "yum-utils", "dkms","kernel-devel" ,"kernel-devel-4.18.0-305.el8.x86_64"
+dir_repositorio: /etc/yum.repos.d
