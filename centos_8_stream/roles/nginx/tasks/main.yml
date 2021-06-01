@@ -18,11 +18,17 @@
 - name: "RELOAD FIREWALL"
   shell: firewall-cmd --reload
 
-- name: "Habilitando serviço NGINX"
-  shell: systemctl enable nginx
+- name: "[NGINX] Start's nginx service"
+  become: yes
+  service:
+    name: nginx
+    state: started
 
-- name: "Habilitando serviço NGINX"
-  shell: systemctl start nginx
+- name: "[NGINX] Enables nginx service"
+  become: yes
+  systemd:
+    name: nginx
+    enabled: yes
 
 - name: "Habilitando proxyreverse para NGINX"
   shell: setsebool -P httpd_can_network_connect on
