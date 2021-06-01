@@ -5,31 +5,31 @@
 - name: Instalando pacotes básicos para o servidor.
   yum:
     state: latest
-    name: [ {{ pacotes_basico_de_instalacao }}]
+    name: [ "epel-release", "yum-utils", "dkms","kernel-devel" ,"kernel-devel-4.18.0-305.el8.x86_64" ]
 
 - name: Verificando a instalação dos pacotes básicos para o servidor.
   yum:
     state: present
-    name: [ {{ pacotes_basico_de_instalacao }}]
+    name: [ "epel-release", "yum-utils", "dkms","kernel-devel" ,"kernel-devel-4.18.0-305.el8.x86_64" ]
 
 - name: Copiando o repositório de instalação do VirtualBox.
   copy:
     src: files/VirtalBox.repo
-    dest: {{ dir_repositorio }}/VirtualBox.repo  
+    dest: '{{ dir_repositorio }}/VirtualBox.repo'
 
 - name: Copiando o repositório de instalação do Hashicorp.
   copy:
     src: files/Hashicorp.repo
-    dest: {{ dir_repositorio }}/Hashicorp.repo
+    dest: '{{ dir_repositorio }}/Hashicorp.repo'
 
 - name: Instalando {{ virtualbox_versao }}
   yum:
-    name: [{{ virtualbox_versao }}]
+    name: [ '{{ virtualbox_versao }}' ]
     state: latest
 
 - name: Confirmando a instalação {{ virtualbox_versao }}
   yum:
-    name: [{{ virtualbox_versao }}]
+    name: [ '{{ virtualbox_versao }}' ]
     state: present
 
 - name: Instalando Vagrant
