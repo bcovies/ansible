@@ -15,12 +15,12 @@
 - name: Copiando o repositório de instalação do VirtualBox.
   copy:
     src: files/VirtalBox.repo
-    dest: {{dir_repositorio}}/VirtualBox.repo  
+    dest: {{ dir_repositorio }}/VirtualBox.repo  
 
 - name: Copiando o repositório de instalação do Hashicorp.
   copy:
     src: files/Hashicorp.repo
-    dest: {{dir_repositorio}}/Hashicorp.repo
+    dest: {{ dir_repositorio }}/Hashicorp.repo
 
 - name: Instalando {{ virtualbox_versao }}
   yum:
