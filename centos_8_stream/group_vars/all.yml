@@ -1,5 +1,6 @@
 ---
 dir_named: /etc/named
 dir_nginx: /etc/nginx/conf.d
-pacotes_basico_de_instalacao: "epel-release", "yum-utils", "dkms","kernel-devel" ,"kernel-devel-4.18.0-305.el8.x86_64"
+pacotes_basico_de_instalacao: '"epel-release", "yum-utils", "dkms","kernel-devel" ,"kernel-devel-4.18.0-305.el8.x86_64"'
 dir_repositorio: /etc/yum.repos.d
+virtualbox_versao: VirtualBox-6.1

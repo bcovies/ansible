@@ -22,12 +22,22 @@
     src: files/Hashicorp.repo
     dest: {{dir_repositorio}}/Hashicorp.repo
 
-- name: Instalando {{ virtualbox }}
+- name: Instalando {{ virtualbox_versao }}
   yum:
-    name: [{{ virtualbox }}]
+    name: [{{ virtualbox_versao }}]
     state: latest
 
-- name: Confirmando a instalação {{ virtualbox }}
+- name: Confirmando a instalação {{ virtualbox_versao }}
   yum:
-    name: [{{ virtualbox }}]
+    name: [{{ virtualbox_versao }}]
+    state: present
+
+- name: Instalando Vagrant
+  yum:
+    name: vagrant
+    state: latest
+
+- name: Confirmando a instalação Vagrant
+  yum:
+    name: vagrant
     state: present

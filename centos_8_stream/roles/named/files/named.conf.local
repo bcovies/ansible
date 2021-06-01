@@ -3,7 +3,7 @@ zone    "dns.br" {
         file "/etc/named/forward.dns.br";
 };
 
-zone    "200.168.192.in-addr.arpa" {
+zone    "1.168.192.in-addr.arpa" {
         type master;
         file "/etc/named/reverse.dns.br";		
 };

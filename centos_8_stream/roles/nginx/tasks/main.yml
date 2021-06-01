@@ -1,20 +1,19 @@
 ---
-- name: "[NGINX] UPDATE CENTOS 8"
-  become: yes
-  shell: yum update -y
-
-- name:  "[NGINX] Instala o nginx"
-  become: yes
+- name: "Instalando o NGINX"
   yum:
     name: nginx
     state: latest
 
-- name: "[NGINX] HTTP SERVICE FIREWALL"
-  become: yes
+- name: "Confirmando a instalação do NGINX"
+  yum:
+    name: nginx
+    state: present
+
+- name: "Adiciona o serviço de HTTP SERVICE FIREWALL"
   shell: firewall-cmd --add-service=http --permanent
 
-- name: "[NGINX] RELOAD FIREWALL"
-  become: yes
+- name: "Adiciona o serviço de HTTP SERVICE FIREWALL"
+  shell: firewall-cmd --add-service=https --permanent
+  
+- name: "RELOAD FIREWALL"
   shell: firewall-cmd --reload
-
-
