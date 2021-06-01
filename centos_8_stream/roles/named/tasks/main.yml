@@ -33,3 +33,10 @@
   systemd:
     name: named
     enabled: yes
+
+- name: Habilita serviço dns  para firewalld
+  shell: firewall-cmd --add-service=dns --permanent
+  
+- name: Recarrega firewalld
+  shell:  firewall-cmd --reload
+
