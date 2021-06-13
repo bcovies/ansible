@@ -6,15 +6,6 @@
 - name: "[WORKAROUND (CENTOS 8)]: Altera o DNS da máquina"
   shell: echo "nameserver 192.168.1.200" > /etc/resolv.conf; echo "nameserver 192.168.1.254" >> /etc/resolv.conf;  chattr +i /etc/resolv.conf;
 
-- name: "Cria as pastas de montagem"
-  shell: mkdir /mnt/{hdd,ssd}
-
-- name: "Adiciona /dev/sdb montagem ao fstab"
-  shell: echo "/dev/sdb /mnt/hdd auto defaults 0 0" >> /etc/fstab
-
-- name: "Adiciona /dev/sda montagem ao fstab"
-  shell: echo "/dev/sda /mnt/ssd auto defaults 0 0" >> /etc/fstab
-
 - name: Instalando pacotes básicos para o servidor.
   yum:
     state: latest

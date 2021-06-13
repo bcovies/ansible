@@ -1,7 +1,6 @@
 #!/bin/bash
 sudo yum update -y
 sudo yum install -y git
-git clone git@github.com:bcovies/ansible.git
 
 sudo mkdir /mnt/{hdd,ssd}
 sudo mount /dev/sda /mnt/ssd
