@@ -1,8 +1,7 @@
 ---   
 - name: Generate Certs
   become: true
-  shell: certbot certonly -m bruno02souto@gmail.com --agree-tos -n -d bcshomelab.ddns.net --webroot -w /usr/share/nginx/html/
-
+  shell: certbot  --nginx -m bruno02souto@gmail.com --agree-tos -n -d bcshomelab.ddns.net
 - name: "[NGINX] COPY ssl.conf"
   become: yes
   copy:

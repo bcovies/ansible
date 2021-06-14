@@ -7,3 +7,4 @@
     - virtualbox
     - vagrant
     - nginx
+    - ssl
