@@ -18,3 +18,6 @@
   apt:
     name: vagrant
     state: present
+
+- name: Instalando plugin vagrant 
+  shell: vagrant plugin install vagrant-vbguest

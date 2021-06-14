@@ -1,0 +1,7 @@
+---
+- name: Install SSL
+  become: true
+  apt: 
+    name: ["certbot", "python3-certbot-nginx","mod_ssl"]
+    state: latest
+
