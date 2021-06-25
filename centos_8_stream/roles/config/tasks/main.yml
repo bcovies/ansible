@@ -2,7 +2,7 @@
 - name: Generate Certs
   become: true
   # shell: certbot  --nginx -m bruno02souto@gmail.com --agree-tos -n -d notafreevpn.ddns.net
-  shell: certbot certonly -m bruno02souto@gmail.com --agree-tos -n -d bcshl.zapto.org --webroot -w /usr/share/nginx/html/
+  shell: certbot certonly -m bruno02souto@gmail.com --agree-tos -n -d bcshomelab.ddns.net --webroot -w /usr/share/nginx/html/
 
 - name: "[NGINX] COPY ssl.conf"
   become: yes
