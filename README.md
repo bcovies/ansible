@@ -43,3 +43,19 @@ ansible/centos_8_stream/roles/named/files
 
 Para o ubuntu, basta verificar o arquivo /etc/netplan/xxxx
 Adicionar o próprio servidor como nameservers e aplicar patch com netplan apply
+
+
+```
+network:
+  ethernets:
+    enp0s31f6:
+      addresses:
+      - 192.168.2.200/24
+      gateway4: 192.168.2.1
+      nameservers:
+        addresses:
+        - 192.168.2.200
+        - 192.168.2.1
+  version: 2
+
+```
