@@ -1,12 +1,12 @@
 ---   
-- name: Generate Certs
-  become: true
-  shell: certbot  --nginx -m bruno02souto@gmail.com --agree-tos -n -d bcshomelab.ddns.net
-- name: "[NGINX] COPY ssl.conf"
-  become: yes
-  copy:
-    src: 'files/ssl.conf'
-    dest: '{{ dir_nginx }}/ssl.conf'
+#- name: Generate Certs
+#  become: true
+#  shell: certbot  --nginx -m bruno02souto@gmail.com --agree-tos -n -d bcshomelab.ddns.net
+#- name: "[NGINX] COPY ssl.conf"
+#  become: yes
+#  copy:
+#    src: 'files/ssl.conf'
+#    dest: '{{ dir_nginx }}/ssl.conf'
 
 - name: "[NGINX] COPY locations.conf"
   become: yes

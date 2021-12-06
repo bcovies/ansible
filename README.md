@@ -41,4 +41,5 @@ ansible/centos_8_stream/roles/named/files
 
 # Ubuntu 20.04
 
-Em progresso...
+Para o ubuntu, basta verificar o arquivo /etc/netplan/xxxx
+Adicionar o próprio servidor como nameservers e aplicar patch com netplan apply

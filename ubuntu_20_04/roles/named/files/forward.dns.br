@@ -9,23 +9,23 @@ $TTL    604800
 ;       NAME SERVER
 @       IN      NS      dns.br.
 
-@       IN      A       192.168.1.200
+@       IN      A       192.168.2.200
 
-dockermgr	    IN	A	192.168.1.200
-dockerwkr01	  IN	A	192.168.1.200
-dockerwkr02	  IN	A	192.168.1.200
+dockermgr	    IN	A	192.168.2.200
+dockerwkr01	  IN	A	192.168.2.200
+dockerwkr02	  IN	A	192.168.2.200
 
-jenkins	    IN	A	192.168.1.200
-gitlab	    IN	A	192.168.1.200
-rundeck	    IN	A	192.168.1.200
+jenkins	    IN	A	192.168.2.200
+gitlab	    IN	A	192.168.2.200
+rundeck	    IN	A	192.168.2.200
 
-vpn.vm	          IN	A	192.168.1.5
+vpn.vm	          IN	A	192.168.2.5
 
-dockermgr.vm	    IN	A	192.168.1.20
-dockerwkr01.vm	  IN	A	192.168.1.21
-dockerwkr02.vm	  IN	A	192.168.1.22
+dockermgr.vm	    IN	A	192.168.2.20
+dockerwkr01.vm	  IN	A	192.168.2.21
+dockerwkr02.vm	  IN	A	192.168.2.22
 
-jenkins.vm	  IN	A	192.168.1.10
-gitlab.vm	    IN	A	192.168.1.11
-rundeck.vm	  IN	A	192.168.1.12
-pwserver.vm	  IN	A	192.168.1.13
+jenkins.vm	  IN	A	192.168.2.10
+gitlab.vm	    IN	A	192.168.2.11
+rundeck.vm	  IN	A	192.168.2.12
+pwserver.vm	  IN	A	192.168.2.13
