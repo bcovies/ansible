@@ -1,5 +1,0 @@
----
-- name: Inicia a instalação dos serviços na máquina local
-  hosts: localhost
-  roles:
-    - config

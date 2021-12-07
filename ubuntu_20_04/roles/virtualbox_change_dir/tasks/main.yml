@@ -1,0 +1,11 @@
+---
+- name: "Cria diretório para boxes vagrant"
+  become_user: "{{ my_user }}"
+  ansible.builtin.file:
+    path: "{{ virtualbox_images_dir }}"
+    state: directory
+    mode: "0755"
+
+- name: "Diretório de Imagens VirtualBox"
+  become_user: "{{ my_user }}"
+  shell: vboxmanage setproperty machinefolder "{{ virtualbox_images_dir }}"

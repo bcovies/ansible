@@ -1,0 +1,15 @@
+---
+- name: named_start
+  service:
+    name: named
+    state: started
+
+- name: named_enable
+  systemd:
+    name: named
+    enabled: yes
+
+- name: named_restart
+  service:
+    name: named
+    state: restarted

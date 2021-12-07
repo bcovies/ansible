@@ -1,0 +1,22 @@
+---
+- name: Adiciona keys
+  shell: curl -fsSL '{{ vagrant_url }}' | apt-key add -
+
+- name: Adiciona repositório
+  shell: apt-add-repository "{{ vagrant_repository }}"
+
+- name: "Update nos pacotes Ubuntu"
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 86400 #One day
+
+- name: "Instalação do vagrant"
+  apt:
+    name: "{{ vagrant_name }}"
+    state: latest
+
+- name: "Instalação do vagrant"
+  apt:
+    name: "{{ vagrant_name }}"
+    state: present

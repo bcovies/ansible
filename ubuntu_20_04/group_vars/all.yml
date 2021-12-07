@@ -1,3 +1,20 @@
 ---
-dir_named: /etc/bind
-dir_nginx: /etc/nginx/conf.d
+bind_dir: /etc/bind
+bind_name: bind9
+certbot_name: certbot
+certbot_module: python3-certbot-nginx
+
+nginx_name: nginx
+nginx_dir: /etc/nginx/conf.d
+nginx_ssl_email: bruno02souto@gmail.com
+nginx_ssl_domain: bcshomelab.ddns.net
+
+vagrant_name: vagrant
+vagrant_url: https://apt.releases.hashicorp.com/gpg
+vagrant_repository: deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main
+vagrant_boxes_dir: /opt/vagrant_boxes/
+
+virtualbox_name: virtualbox
+virtualbox_images_dir: /opt/virtualbox_images/
+
+my_user: dev

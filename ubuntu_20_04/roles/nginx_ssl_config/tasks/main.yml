@@ -1,0 +1,19 @@
+---
+- name: "Instala aplicaçãoes para SSL"
+  apt:
+    name: ["{{ certbot_name }}", "{{ certbot_module }}"]
+    state: latest
+
+- name: "Certifica a instalação"
+  apt:
+    name: ["{{ certbot_name }}", "{{ certbot_module }}"]
+    state: present
+
+- name: "Gera os certificados"
+  shell: certbot  --nginx -m '{{ nginx_ssl_email }}' --agree-tos -n -d '{{ nginx_ssl_domain }}'
+
+- name: "Cópia da configuração do SSL para nginx"
+  copy:
+    src: "files/ssl.conf"
+    dest: "{{ dir_nginx }}/ssl.conf"
+  notify: restart_nginx
