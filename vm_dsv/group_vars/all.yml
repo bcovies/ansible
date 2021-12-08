@@ -1,0 +1,23 @@
+---
+## USER ##
+my_user: dev
+docker_group: docker
+sudo_user: root
+## PACKAGES ##
+ca_certificates_package: ca-certificates 
+curl_package: curl 
+gnupg_package: gnupg 
+lsb_release_package: lsb-release
+docker_ce_package: docker-ce
+docker_ce_cli_package: docker-ce-cli
+containerd_io_package: containerd.io
+## PATHS ##
+user_ssh_path: /home/dev/.ssh
+docker_compose_path: /usr/local/bin/docker-compose
+docker_service_path: /etc/systemd/system/docker.service.d
+## SERVICES ##
+docker_service: docker
+containerd_service: containerd
+## URLS ##
+docker_compose_url: https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)
+
