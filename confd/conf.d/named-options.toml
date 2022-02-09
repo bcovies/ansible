@@ -1,0 +1,8 @@
+[template]
+src = "named-options.conf.tmpl"
+dest = "/tmp/confd/named/named.conf.options"
+keys = [
+    "/forward/1",
+    "/forward/2",
+    "/cidir/octet",
+]

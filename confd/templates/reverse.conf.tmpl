@@ -1,0 +1,24 @@
+$TTL    604800
+@       IN      SOA     {{ getv "/domain/sufix" }}. x.{{ getv "/domain/sufix" }}. (
+                        20210403        ; Serial
+                         604800         ; Refresh
+                         864500         ; Retry
+                        2419270         ; Expire
+                         604880 )       ; Negative Cache TTL
+;
+@       IN      NS      {{ getv "/domain/sufix" }}.
+        IN      A       {{ getv "/dns/host/ip" }}
+
+{{ getv "/end/dns/host/ip" }}      IN      PTR     {{ getv "/name/machine/1" }}.{{ getv "/domain/sufix" }}.
+{{ getv "/end/dns/host/ip" }}      IN      PTR     {{ getv "/name/machine/2" }}.{{ getv "/domain/sufix" }}.
+{{ getv "/end/dns/host/ip" }}      IN      PTR     {{ getv "/name/machine/3" }}.{{ getv "/domain/sufix" }}.
+{{ getv "/end/dns/host/ip" }}      IN      PTR     {{ getv "/name/machine/4" }}.{{ getv "/domain/sufix" }}.
+{{ getv "/end/dns/host/ip" }}      IN      PTR     {{ getv "/name/machine/5" }}.{{ getv "/domain/sufix" }}.
+{{ getv "/end/dns/host/ip" }}      IN      PTR     {{ getv "/name/machine/6" }}.{{ getv "/domain/sufix" }}.
+
+{{ getv "/end/ip/machine/1" }}      IN      PTR     {{ getv "/name/machine/1" }}.vm.{{ getv "/domain/sufix" }}.
+{{ getv "/end/ip/machine/2" }}      IN      PTR     {{ getv "/name/machine/2" }}.vm.{{ getv "/domain/sufix" }}.
+{{ getv "/end/ip/machine/3" }}      IN      PTR     {{ getv "/name/machine/3" }}.vm.{{ getv "/domain/sufix" }}.
+{{ getv "/end/ip/machine/4" }}      IN      PTR     {{ getv "/name/machine/4" }}.vm.{{ getv "/domain/sufix" }}.
+{{ getv "/end/ip/machine/5" }}      IN      PTR     {{ getv "/name/machine/5" }}.vm.{{ getv "/domain/sufix" }}.
+{{ getv "/end/ip/machine/6" }}      IN      PTR     {{ getv "/name/machine/6" }}.vm.{{ getv "/domain/sufix" }}.

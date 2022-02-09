@@ -1,0 +1,9 @@
+zone    "{{ getv "/domain/sufix" }}" {
+        type master;
+        file "/etc/bind/forward.{{ getv "/domain/sufix" }}";
+};
+
+zone    "{{ getv "/reverse/dns/host/ip" }}.in-addr.arpa" {
+        type master;
+        file "/etc/bind/reverse.{{ getv "/domain/sufix" }}";		
+};

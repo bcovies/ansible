@@ -1,0 +1,25 @@
+$TTL    604800
+@                               IN  SOA {{ getv "/domain/sufix" }}. x.{{ getv "/domain/sufix" }}. (
+                       20210403         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+;       NAME SERVER
+@                               IN  NS  {{ getv "/domain/sufix" }}.
+@                               IN  A   {{ getv "/dns/host/ip" }}
+
+{{ getv "/name/machine/1" }}	    IN	A	{{ getv "/dns/host/ip" }}
+{{ getv "/name/machine/2" }}	    IN	A	{{ getv "/dns/host/ip" }}
+{{ getv "/name/machine/3" }}      IN	A	{{ getv "/dns/host/ip" }}
+{{ getv "/name/machine/4" }}      IN	A	{{ getv "/dns/host/ip" }}
+{{ getv "/name/machine/5" }}      IN	A	{{ getv "/dns/host/ip" }}
+{{ getv "/name/machine/6" }}      IN	A	{{ getv "/dns/host/ip" }}
+
+{{ getv "/name/machine/1" }}.vm   IN	A	{{ getv "/ip/machine/1" }}
+{{ getv "/name/machine/2" }}.vm	  IN	A	{{ getv "/ip/machine/2" }}
+{{ getv "/name/machine/3" }}.vm	  IN	A	{{ getv "/ip/machine/3" }}
+{{ getv "/name/machine/4" }}.vm   IN	A	{{ getv "/ip/machine/4" }}
+{{ getv "/name/machine/5" }}.vm   IN	A	{{ getv "/ip/machine/5" }}
+{{ getv "/name/machine/6" }}.vm   IN	A	{{ getv "/ip/machine/6" }}

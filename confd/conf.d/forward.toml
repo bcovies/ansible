@@ -1,0 +1,19 @@
+[template]
+src = "forward.conf.tmpl"
+dest = "/tmp/confd/named/forward.domain.sufix"
+keys = [
+    "/domain/sufix",
+    "/dns/host/ip",
+    "/name/machine/1",
+    "/name/machine/2",
+    "/name/machine/3",
+    "/name/machine/4",
+    "/name/machine/5",
+    "/name/machine/6",
+    "/ip/machine/1",
+    "/ip/machine/2",
+    "/ip/machine/3",
+    "/ip/machine/4",
+    "/ip/machine/5",
+    "/ip/machine/6",
+]

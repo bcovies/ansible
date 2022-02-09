@@ -1,0 +1,7 @@
+[template]
+src = "named-local.conf.tmpl"
+dest = "/tmp/confd/named/named.conf.local"
+keys = [
+    "/domain/sufix",
+    "/reverse/dns/host/ip",
+]

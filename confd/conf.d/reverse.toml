@@ -1,0 +1,20 @@
+[template]
+src = "reverse.conf.tmpl"
+dest = "/tmp/confd/named/reverse.domain.sufix"
+keys = [
+    "/domain/sufix",
+    "/dns/host/ip",
+    "/end/dns/host/ip",
+    "/name/machine/1",
+    "/name/machine/2",
+    "/name/machine/3",
+    "/name/machine/4",
+    "/name/machine/5",
+    "/name/machine/6",
+    "/end/ip/machine/1",
+    "/end/ip/machine/2",
+    "/end/ip/machine/3",
+    "/end/ip/machine/4",
+    "/end/ip/machine/5",
+    "/end/ip/machine/6",
+]
