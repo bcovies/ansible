@@ -1,0 +1,8 @@
+[template]
+src = "netplan.conf.tmpl"
+dest = "/tmp/confd/netplan/netplan.conf.tmpl"
+keys = [
+    "/domain/sufix",
+    "/dns/host/ip",
+    "/gateway/ip",
+]

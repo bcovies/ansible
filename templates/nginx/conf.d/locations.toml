@@ -1,0 +1,12 @@
+[template]
+src = "locations.conf.tmpl"
+dest = "/tmp/confd/nginx/locations.conf"
+keys = [
+    "/domain/sufix",
+    "/name/machine/1",
+    "/name/machine/2",
+    "/name/machine/3",
+    "/name/machine/4",
+    "/name/machine/5",
+    "/name/machine/6",
+]

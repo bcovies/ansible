@@ -1,0 +1,55 @@
+server {
+    listen      443;
+    listen      [::]:443 ;
+	server_name {{ getv "/domain/sufix" }};
+}
+
+server {
+    listen      80;
+	server_name {{ getv "/name/machine/1" }}.{{ getv "/domain/sufix" }};
+    location / {
+        proxy_pass http://{{ getv "/name/machine/1" }}.vm.{{ getv "/domain/sufix" }}:4440/;
+    }
+}
+
+server {
+    listen      80;
+	server_name {{ getv "/name/machine/2" }}.{{ getv "/domain/sufix" }};
+    location / {
+        proxy_pass http://{{ getv "/name/machine/2" }}.vm.{{ getv "/domain/sufix" }}:8080/;
+    }  
+}
+
+server {
+    listen      80;
+	server_name {{ getv "/name/machine/3" }}.{{ getv "/domain/sufix" }};
+    location / {
+        proxy_pass http://{{ getv "/name/machine/3" }}.vm.{{ getv "/domain/sufix" }}/;
+    }  
+}
+
+server {
+    listen      80;
+	server_name {{ getv "/name/machine/4" }}.{{ getv "/domain/sufix" }};
+    location / {
+        proxy_pass http://{{ getv "/name/machine/4" }}.vm.{{ getv "/domain/sufix" }}/;
+    }  
+}
+
+
+server {
+    listen      80;
+	server_name {{ getv "/name/machine/5" }}.{{ getv "/domain/sufix" }};
+    location / {
+        proxy_pass http://{{ getv "/name/machine/5" }}.vm.{{ getv "/domain/sufix" }}/;
+    }  
+}
+
+server {
+    listen      80;
+	server_name {{ getv "/name/machine/6" }}.{{ getv "/domain/sufix" }};
+    location / {
+        proxy_pass http://{{ getv "/name/machine/6" }}.vm.{{ getv "/domain/sufix" }}/;
+    }  
+}
+

@@ -1,0 +1,8 @@
+network:
+  ethernets:
+    enp0s31f6:
+      dhcp4: no
+      addresses: [{{ getv  "/dns/host/ip" }}/24]
+      gateway4: {{ getv "/gateway/ip" }}
+      nameservers:
+        addresses: [{{ getv  "/dns/host/ip" }}, {{ getv "/gateway/ip" }}]

@@ -1,0 +1,7 @@
+[template]
+src = "ssl.conf.tmpl"
+dest = "/tmp/confd/nginx/ssl.conf"
+keys = [
+    "/domain/sufix",
+    "/server/name",
+]
