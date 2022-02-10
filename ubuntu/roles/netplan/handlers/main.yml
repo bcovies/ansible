@@ -1,3 +1,6 @@
 ---
 - name: apply_netplan
-  shell: netplan --debug  apply
+  shell: netplan --debug apply
+
+- name: generate_netplan
+  shell: netplan generate

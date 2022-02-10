@@ -1,5 +1,5 @@
 ---
-- name: Aplica as modificações ao localhost
+- name: Installing on localhost machine
   hosts: localhost
   roles:
     - named
