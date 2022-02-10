@@ -1,8 +1,0 @@
-network:
-  ethernets:
-    enp0s31f6:
-      dhcp4: no
-      addresses: [192.168.0.1/24]
-      gateway4: 192.168.0.254
-      nameservers:
-        addresses: [192.168.0.1, 192.168.0.254]
