@@ -1,6 +1,0 @@
----
-- name: "Cópia do locations.conf"
-  copy:
-    src: "files/locations.conf"
-    dest: "{{ nginx_dir }}/locations.conf"
-  notify: restart_nginx

@@ -1,0 +1,19 @@
+---
+- name: "Install all dependencies for SSL certbot"
+  apt:
+    name: ["{{ certbot_name }}", "{{ certbot_module }}"]
+    state: latest
+
+- name: "Check if certbot is installed"
+  apt:
+    name: ["{{ certbot_name }}", "{{ certbot_module }}"]
+    state: present
+
+- name: "Generate certs"
+  shell: certbot  --nginx -m '{{ nginx_ssl_email }}' --agree-tos -n -d '{{ nginx_ssl_domain }}'
+
+- name: "Updating nginx ssl configurations {{ dir_nginx }}/ssl.conf"
+  copy:
+    src: "files/ssl.conf"
+    dest: "{{ dir_nginx }}/ssl.conf"
+  notify: restart_nginx

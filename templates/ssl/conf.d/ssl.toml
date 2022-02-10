@@ -1,0 +1,7 @@
+[template]
+src = "ssl.conf.tmpl"
+dest = "/tmp/confd/ssl/ssl.conf"
+keys = [
+    "/domain/sufix",
+    "/server/name",
+]

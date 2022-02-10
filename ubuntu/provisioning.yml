@@ -1,0 +1,13 @@
+---
+- name: Aplica as modificações ao localhost
+  hosts: localhost
+  roles:
+    - named_install
+    - netplan_config
+    - nginx_install
+    - nginx_locations_config
+    - nginx_ssl_config
+    - vagrant_install
+    - vagrant_user_changes
+    - virtualbox_install
+    - virtualbox_change_dir

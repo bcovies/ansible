@@ -1,6 +1,6 @@
 [template]
 src = "netplan.conf.tmpl"
-dest = "/tmp/confd/netplan/netplan.conf.tmpl"
+dest = "/tmp/confd/netplan/netplan.yaml"
 keys = [
     "/domain/sufix",
     "/dns/host/ip",

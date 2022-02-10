@@ -1,0 +1,9 @@
+---
+- name: "Cópia do arquivo netplan.yml"
+  copy:
+    src: files/netplan.yaml
+    dest: /tmp/netplan.yaml
+
+- name: "WORKAROUND(1): Adiciona Gateway e DNS servers"
+  shell: cat  /tmp/netplan.yaml > /etc/netplan/00-installer-config.yaml; chattr +i /etc/netplan/00-installer-config.yaml
+  notify: apply_netplan

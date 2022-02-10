@@ -1,0 +1,8 @@
+[template]
+src = "all.conf.tmpl"
+dest = "/tmp/confd/ansible/all.yml"
+keys = [
+    "/domain/sufix",
+    "/server/name",
+    "/user/email",
+]

@@ -1,0 +1,15 @@
+---
+- name: start_nginx
+  service:
+    name: "{{ nginx_name }}"
+    state: started
+
+- name: enable_nginx
+  systemd:
+    name: "{{ nginx_name }}"
+    enabled: yes
+
+- name: restart_nginx
+  service:
+    name: "{{ nginx_name }}"
+    state: restarted

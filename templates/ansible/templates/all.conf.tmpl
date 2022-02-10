@@ -1,0 +1,25 @@
+---
+domain_sufix: {{ getv "/domain/sufix" }}
+
+bind_dir: /etc/bind
+bind_name: bind9
+
+certbot_name: certbot
+certbot_module: python3-certbot-nginx
+
+nginx_name: nginx
+nginx_dir: /etc/nginx/conf.d
+
+nginx_ssl_email: {{ getv "/user/email" }}
+nginx_ssl_domain: {{ getv "/server/name" }}.{{ getv "/domain/sufix" }}
+
+vagrant_name: vagrant
+vagrant_url: https://apt.releases.hashicorp.com/gpg
+
+vagrant_repository: deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main
+vagrant_boxes_dir: /opt/vagrant_boxes/
+
+virtualbox_name: virtualbox
+virtualbox_images_dir: /opt/virtualbox_images/
+
+my_user: dev
