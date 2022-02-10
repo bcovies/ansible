@@ -66,11 +66,23 @@ rename_named_files(){
     fi
 }
 
+create_local_foldes(){
+    echo "Creating folder: ${CURRENT_PATH}/ubuntu/group_vars/"
+    mkdir -p ${CURRENT_PATH}/ubuntu/group_vars/
+    for local_folder_name in ${PROJECTS_TEMPLATES[@]}; do
+        echo "Creating folder: ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/"
+        mkdir -p ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/
+    done
+    echo "----------------------------------------------------------------------------"
+
+}
+
+
 copy_files_tmp_folder(){
     for local_folder_name in ${PROJECTS_TEMPLATES[@]}; do
         echo "COPYING CURRENT TEMPLATE: ${local_folder_name}"
         echo
-        if [[ ${local_folder_name} == 'ansible' ]]; then
+        if [[ ${local_folder_name} == 'ansible' ]]; then    
             echo "${PATH_TMP_FILES}/${local_folder_name} --> ${CURRENT_PATH}/ubuntu/group_vars/"
             cp -a ${PATH_TMP_FILES}/${local_folder_name}/* ${CURRENT_PATH}/ubuntu/group_vars/
         else
@@ -83,11 +95,13 @@ copy_files_tmp_folder(){
 
 
 
+
 init(){
     create_templates_path_tmp
     get_local_pwd
     create_templates_confd
     rename_named_files
+    create_local_foldes
     copy_files_tmp_folder
 }
 
