@@ -67,14 +67,16 @@ rename_named_files(){
 }
 
 create_local_foldes(){
-    echo "Creating folder: ${CURRENT_PATH}/ubuntu/group_vars/"
-    mkdir -p ${CURRENT_PATH}/ubuntu/group_vars/
     for local_folder_name in ${PROJECTS_TEMPLATES[@]}; do
-        echo "Creating folder: ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/"
-        mkdir -p ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/
+        if [[ ${local_folder_name} == 'ansible' ]]; then    
+            echo "CREATING FOLDER: ${CURRENT_PATH}/ubuntu/group_vars/"
+            mkdir -p ${CURRENT_PATH}/ubuntu/group_vars/
+        else
+            echo "CREATING FOLDER: ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/"
+            mkdir -p ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/
+        fi    
     done
     echo "----------------------------------------------------------------------------"
-
 }
 
 
