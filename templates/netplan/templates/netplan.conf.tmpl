@@ -6,3 +6,4 @@ network:
       gateway4: {{ getv "/gateway/ip" }}
       nameservers:
         addresses: [{{ getv  "/dns/host/ip" }}, {{ getv "/gateway/ip" }}]
+        search: [{{ getv "/domain/sufix" }}]

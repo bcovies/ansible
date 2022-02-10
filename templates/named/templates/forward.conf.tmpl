@@ -1,5 +1,5 @@
 $TTL    604800
-@                               IN  SOA {{ getv "/domain/sufix" }}. x.{{ getv "/domain/sufix" }}. (
+@                               IN  SOA {{ getv "/domain/sufix" }}. root.{{ getv "/domain/sufix" }}. (
                        20210403         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
@@ -7,8 +7,8 @@ $TTL    604800
                          604800 )       ; Negative Cache TTL
 
 ;       NAME SERVER
-@                               IN  NS  {{ getv "/domain/sufix" }}.
-@                               IN  A   {{ getv "/dns/host/ip" }}
+@ IN  NS  {{ getv "/domain/sufix" }}.
+@ IN  A   {{ getv "/dns/host/ip" }}
 
 {{ getv "/name/machine/1" }}	    IN	A	{{ getv "/dns/host/ip" }}
 {{ getv "/name/machine/2" }}	    IN	A	{{ getv "/dns/host/ip" }}
