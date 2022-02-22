@@ -1,9 +1,0 @@
-network:
-  ethernets:
-    enp0s3:
-      dhcp4: no
-      addresses: [{{ getv  "/dns/host/ip" }}/24]
-      gateway4: {{ getv "/gateway/ip" }}
-      nameservers:
-        addresses: [{{ getv  "/dns/host/ip" }}, {{ getv "/gateway/ip" }}]
-        search: [{{ getv "/domain/sufix" }}]

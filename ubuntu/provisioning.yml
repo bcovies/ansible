@@ -3,6 +3,5 @@
   hosts: localhost
   roles:
     - named
-    - netplan
     - nginx
     # - ssl
