@@ -69,11 +69,11 @@ rename_named_files(){
 create_local_foldes(){
     for local_folder_name in ${PROJECTS_TEMPLATES[@]}; do
         if [[ ${local_folder_name} == 'ansible' ]]; then    
-            echo "CREATING FOLDER: ${CURRENT_PATH}/ubuntu/group_vars/"
-            mkdir -p ${CURRENT_PATH}/ubuntu/group_vars/
+            echo "CREATING FOLDER: ${CURRENT_PATH}/debian/group_vars/"
+            mkdir -p ${CURRENT_PATH}/debian/group_vars/
         else
-            echo "CREATING FOLDER: ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/"
-            mkdir -p ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/
+            echo "CREATING FOLDER: ${CURRENT_PATH}/debian/roles/${local_folder_name}/files/"
+            mkdir -p ${CURRENT_PATH}/debian/roles/${local_folder_name}/files/
         fi    
     done
     echo "----------------------------------------------------------------------------"
@@ -85,11 +85,11 @@ copy_files_tmp_folder(){
         echo "COPYING CURRENT TEMPLATE: ${local_folder_name}"
         echo
         if [[ ${local_folder_name} == 'ansible' ]]; then    
-            echo "${PATH_TMP_FILES}/${local_folder_name} --> ${CURRENT_PATH}/ubuntu/group_vars/"
-            cp -a ${PATH_TMP_FILES}/${local_folder_name}/* ${CURRENT_PATH}/ubuntu/group_vars/
+            echo "${PATH_TMP_FILES}/${local_folder_name} --> ${CURRENT_PATH}/debian/group_vars/"
+            cp -a ${PATH_TMP_FILES}/${local_folder_name}/* ${CURRENT_PATH}/debian/group_vars/
         else
-            echo "${PATH_TMP_FILES}/${local_folder_name} --> ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/"
-            cp -a ${PATH_TMP_FILES}/${local_folder_name}/* ${CURRENT_PATH}/ubuntu/roles/${local_folder_name}/files/
+            echo "${PATH_TMP_FILES}/${local_folder_name} --> ${CURRENT_PATH}/debian/roles/${local_folder_name}/files/"
+            cp -a ${PATH_TMP_FILES}/${local_folder_name}/* ${CURRENT_PATH}/debian/roles/${local_folder_name}/files/
         fi
         echo "----------------------------------------------------------------------------"
     done

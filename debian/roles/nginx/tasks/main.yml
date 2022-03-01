@@ -10,10 +10,10 @@
     state: present
   notify:
     - enable_nginx
-    # - start_nginx
+    - start_nginx
 
 - name: "Copying locations.conf to {{ nginx_dir }}/locations.conf"
   copy:
     src: "files/locations.conf"
     dest: "{{ nginx_dir }}/locations.conf"
-  # notify: restart_nginx
+  notify: restart_nginx

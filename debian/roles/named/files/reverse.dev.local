@@ -1,0 +1,24 @@
+$TTL    604800
+@       IN      SOA     dev.local. x.dev.local. (
+                        20210403        ; Serial
+                         604800         ; Refresh
+                         864500         ; Retry
+                        2419270         ; Expire
+                         604880 )       ; Negative Cache TTL
+;
+@       IN      NS      dev.local.
+        IN      A       192.168.2.50
+
+50      IN      PTR     rundeck.dev.local.
+50      IN      PTR     jenkins.dev.local.
+50      IN      PTR     dockermgr.dev.local.
+50      IN      PTR     dockerwkr01.dev.local.
+50      IN      PTR     dockerwkr02.dev.local.
+50      IN      PTR     dockerwkr03.dev.local.
+
+2      IN      PTR     rundeck.vm.dev.local.
+3      IN      PTR     jenkins.vm.dev.local.
+4      IN      PTR     dockermgr.vm.dev.local.
+5      IN      PTR     dockerwkr01.vm.dev.local.
+6      IN      PTR     dockerwkr02.vm.dev.local.
+7      IN      PTR     dockerwkr03.vm.dev.local.

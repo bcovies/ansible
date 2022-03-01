@@ -1,0 +1,9 @@
+zone    "dev.local" {
+        type master;
+        file "/etc/bind/forward.dev.local";
+};
+
+zone    "2.168.192.in-addr.arpa" {
+        type master;
+        file "/etc/bind/reverse.dev.local";		
+};
