@@ -13,13 +13,13 @@ $TTL    604800
 rundeck	    IN	A	192.168.2.50
 jenkins	    IN	A	192.168.2.50
 dockermgr      IN	A	192.168.2.50
-dockerwkr01      IN	A	192.168.2.50
-dockerwkr02      IN	A	192.168.2.50
-dockerwkr03      IN	A	192.168.2.50
+dockerwrk1      IN	A	192.168.2.50
+dockerwrk2      IN	A	192.168.2.50
+dockerwrk03      IN	A	192.168.2.50
 
 rundeck.vm   IN	A	192.168.2.2
 jenkins.vm	  IN	A	192.168.2.3
 dockermgr.vm	  IN	A	192.168.2.4
-dockerwkr01.vm   IN	A	192.168.2.5
-dockerwkr02.vm   IN	A	192.168.2.6
-dockerwkr03.vm   IN	A	192.168.2.7
+dockerwrk1.vm   IN	A	192.168.2.5
+dockerwrk2.vm   IN	A	192.168.2.6
+dockerwrk03.vm   IN	A	192.168.2.7
