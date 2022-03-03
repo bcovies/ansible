@@ -11,14 +11,14 @@ $TTL    604800
 
 50      IN      PTR     rundeck.dev.local.
 50      IN      PTR     jenkins.dev.local.
-50      IN      PTR     dockermgr.dev.local.
-50      IN      PTR     dockerwrk1.dev.local.
-50      IN      PTR     dockerwrk2.dev.local.
-50      IN      PTR     dockerwrk03.dev.local.
+50      IN      PTR     k8smaster.dev.local.
+50      IN      PTR     k8snode1.dev.local.
+50      IN      PTR     k8snode2.dev.local.
+50      IN      PTR     k8snode2.dev.local.
 
 2      IN      PTR     rundeck.vm.dev.local.
 3      IN      PTR     jenkins.vm.dev.local.
-4      IN      PTR     dockermgr.vm.dev.local.
-5      IN      PTR     dockerwrk1.vm.dev.local.
-6      IN      PTR     dockerwrk2.vm.dev.local.
-7      IN      PTR     dockerwrk03.vm.dev.local.
+4      IN      PTR     k8smaster.vm.dev.local.
+5      IN      PTR     k8snode1.vm.dev.local.
+6      IN      PTR     k8snode2.vm.dev.local.
+7      IN      PTR     k8snode2.vm.dev.local.
