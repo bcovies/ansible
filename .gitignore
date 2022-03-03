@@ -3,3 +3,4 @@ ubuntu/roles/named/files/*
 ubuntu/roles/netplan/files/*
 ubuntu/roles/nginx/files/*
 ubuntu/roles/ssl/files/*
+provision.retry
